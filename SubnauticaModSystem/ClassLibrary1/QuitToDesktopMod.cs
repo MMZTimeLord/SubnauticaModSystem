@@ -56,18 +56,18 @@ namespace QuitToDesktop
                     //    quitButton.onClick.AddListener(() => { __instance.QuitGame(true); });
                     //else if (QPatch.Config.ShowConfirmationDialog)
                     //    quitButton.onClick.AddListener(() => { quitConfirmation.SetActive(true); }); // set our new confirmation to true
+                }
 
-                    IEnumerable<Text> texts = quitButton.GetComponents<Text>().Concat(quitButton.GetComponentsInChildren<Text>());
-                    foreach (Text text in texts)
-                    {
-                        text.text = "Quit to Desktop";
-                    }
+                IEnumerable <TMPro.TextMeshProUGUI> NBtexts = quitButton.GetComponents<TMPro.TextMeshProUGUI>().Concat(quitButton.GetComponentsInChildren<TMPro.TextMeshProUGUI>());
+                foreach (TMPro.TextMeshProUGUI text in NBtexts)
+                {
+                    text.text = "Quit to Desktop";
+                }
 
-                    texts = __instance.quitToMainMenuButton.GetComponents<Text>().Concat(__instance.quitToMainMenuButton.GetComponentsInChildren<Text>());
-                    foreach (Text text in texts)
-                    {
-                        text.text = "Quit to Main Menu";
-                    }
+                IEnumerable <TMPro.TextMeshProUGUI> MMtexts = __instance.quitToMainMenuButton.GetComponents<TMPro.TextMeshProUGUI>().Concat(__instance.quitToMainMenuButton.GetComponentsInChildren<TMPro.TextMeshProUGUI>());
+                foreach (TMPro.TextMeshProUGUI text in MMtexts)
+                {
+                    text.text = "Quit to Main Menu";
                 }
             }
         }
