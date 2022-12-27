@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HabitatControlPanel.Properties {
+namespace CustomizedStorage.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace HabitatControlPanel.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("HabitatControlPanel.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("CustomizedStorage.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,7 +61,7 @@ namespace HabitatControlPanel.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Adds a Habitat Control Panel blueprint that lets you control stuff about your habitat.
+        ///   Looks up a localized string similar to Customize almost all storage options.
         /// </summary>
         internal static string desc {
             get {
@@ -70,7 +70,7 @@ namespace HabitatControlPanel.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to HabitatControlPanel.
+        ///   Looks up a localized string similar to CustomizedStorage.
         /// </summary>
         internal static string title {
             get {
