@@ -43,7 +43,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TorpedoImprovements", "Torp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HudConfig", "HudConfig\HudConfig.csproj", "{2EBF18DB-437E-4A9A-A03C-06770A3F9CB6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuitToDesktop(BepInEx)", "ClassLibrary1\QuitToDesktop(BepInEx).csproj", "{D61DB93E-A531-4F7C-8F22-3483B103B7D7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuitToDesktop(BepInEx)", "QuitToDestkop(BepInEx)\QuitToDesktop(BepInEx).csproj", "{D61DB93E-A531-4F7C-8F22-3483B103B7D7}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
