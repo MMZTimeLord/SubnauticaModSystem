@@ -12,9 +12,9 @@ namespace CustomizedStorage
         // Original Base Code by RandyKnapp - Updated for BepInEx by d2allgr
         public const string
             MODNAME = "CustomizedStorage",
-            AUTHOR = "RandyKnapp - Updated by d2allgr",
+            AUTHOR = "RandyKnapp",
             GUID = AUTHOR + "_" + MODNAME,
-            VERSION = "1.0.5.0";
+            VERSION = "1.0.6.0";
         
         private void Awake()
         {
