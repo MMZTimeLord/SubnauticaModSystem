@@ -45,6 +45,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HudConfig", "HudConfig\HudC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuitToDesktop(BepInEx)", "QuitToDestkop(BepInEx)\QuitToDesktop(BepInEx).csproj", "{D61DB93E-A531-4F7C-8F22-3483B103B7D7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_EmptyMod(BepInEx)", "_EmptyMod(BepInEx)\_EmptyMod(BepInEx).csproj", "{2AC5B537-0BD1-49B8-B927-D4DD063BE113}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomizedStorage(BepInEx SingleFile Test)", "CustomizedStorage(BepInEx SingleFile Test)\CustomizedStorage(BepInEx SingleFile Test).csproj", "{129329F7-72E5-46E2-A873-D468AA0B5A61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomizedStorage(BepInEx)", "Customized Storage(BepInEx)\CustomizedStorage(BepInEx).csproj", "{B9C20D89-575A-4334-84B4-4E0885536467}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomizedStorage(BepInEx v2)", "CustomizedStorage(BepInEx V2)\CustomizedStorage(BepInEx v2).csproj", "{F328BBA0-4D39-4B64-82F2-22C23C701536}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Common\Common.projitems*{03b89974-4ea6-4cd4-8c9f-c039eb81de5f}*SharedItemsImports = 4
@@ -166,11 +174,33 @@ Global
 		{2EBF18DB-437E-4A9A-A03C-06770A3F9CB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2EBF18DB-437E-4A9A-A03C-06770A3F9CB6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D61DB93E-A531-4F7C-8F22-3483B103B7D7}.Debug_Autosort|Any CPU.ActiveCfg = Debug|Any CPU
-		{D61DB93E-A531-4F7C-8F22-3483B103B7D7}.Debug_Autosort|Any CPU.Build.0 = Debug|Any CPU
 		{D61DB93E-A531-4F7C-8F22-3483B103B7D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D61DB93E-A531-4F7C-8F22-3483B103B7D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D61DB93E-A531-4F7C-8F22-3483B103B7D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D61DB93E-A531-4F7C-8F22-3483B103B7D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AC5B537-0BD1-49B8-B927-D4DD063BE113}.Debug_Autosort|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AC5B537-0BD1-49B8-B927-D4DD063BE113}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AC5B537-0BD1-49B8-B927-D4DD063BE113}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AC5B537-0BD1-49B8-B927-D4DD063BE113}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AC5B537-0BD1-49B8-B927-D4DD063BE113}.Release|Any CPU.Build.0 = Release|Any CPU
+		{129329F7-72E5-46E2-A873-D468AA0B5A61}.Debug_Autosort|Any CPU.ActiveCfg = Debug|Any CPU
+		{129329F7-72E5-46E2-A873-D468AA0B5A61}.Debug_Autosort|Any CPU.Build.0 = Debug|Any CPU
+		{129329F7-72E5-46E2-A873-D468AA0B5A61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{129329F7-72E5-46E2-A873-D468AA0B5A61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{129329F7-72E5-46E2-A873-D468AA0B5A61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{129329F7-72E5-46E2-A873-D468AA0B5A61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9C20D89-575A-4334-84B4-4E0885536467}.Debug_Autosort|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9C20D89-575A-4334-84B4-4E0885536467}.Debug_Autosort|Any CPU.Build.0 = Debug|Any CPU
+		{B9C20D89-575A-4334-84B4-4E0885536467}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9C20D89-575A-4334-84B4-4E0885536467}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9C20D89-575A-4334-84B4-4E0885536467}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9C20D89-575A-4334-84B4-4E0885536467}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F328BBA0-4D39-4B64-82F2-22C23C701536}.Debug_Autosort|Any CPU.ActiveCfg = Debug|Any CPU
+		{F328BBA0-4D39-4B64-82F2-22C23C701536}.Debug_Autosort|Any CPU.Build.0 = Debug|Any CPU
+		{F328BBA0-4D39-4B64-82F2-22C23C701536}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F328BBA0-4D39-4B64-82F2-22C23C701536}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F328BBA0-4D39-4B64-82F2-22C23C701536}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F328BBA0-4D39-4B64-82F2-22C23C701536}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

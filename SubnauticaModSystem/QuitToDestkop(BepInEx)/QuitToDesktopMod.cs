@@ -4,28 +4,16 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 using SMLHelper.V2.Handlers;
-using SMLHelper.V2.Json;
-using SMLHelper.V2.Options.Attributes;
 
 namespace QuitToDesktop
 {
-    /// The MenuAttribute allows us to set the title of our options menu in the "Mods" tab.
-    [Menu("Quit to Desktop")]
-    public class QTDConfig : ConfigFile
-    {
-        /// A Toggle is used to represent true or false
-        ///
-        /// Default is true
-        [Toggle("Save Warning upon Quit to Desktop")]
-        public bool SaveWarningQTD = true;
-
-    }
-
     class QuitToDesktopMod
     {
+        // make Mod Options available for use from the config file
         internal static QTDConfig QTDConfig { get; } = OptionsPanelHandler.RegisterModOptions<QTDConfig>();
 
-    [HarmonyPatch(typeof(IngameMenu), nameof(IngameMenu.Open))]
+        // Harmony patch to this section/object in the game
+        [HarmonyPatch(typeof(IngameMenu), nameof(IngameMenu.Open))]
         public static class IngameMenu_Open_Patch
         {
 
@@ -73,8 +61,8 @@ namespace QuitToDesktop
                     quitButton = GameObject.Instantiate(buttonPrefab, __instance.quitToMainMenuButton.transform.parent);
                     quitButton.name = "ButtonQuitToDesktop";
                     quitButton.onClick.RemoveAllListeners();
-                    // quitButton.onClick.AddListener(() => { __instance.gameObject.FindChild("QuitConfirmationWithSaveWarning").SetActive(false); }); // set the confirmation with save false so it doesn't conflict
-                    // quitButton.onClick.AddListener(() => { __instance.gameObject.FindChild("QuitConfirmation").SetActive(false); }); // set the Quit To Main Menu confirmation to false so it doesn't conflict
+                    quitButton.onClick.AddListener(() => { __instance.gameObject.FindChild("QuitConfirmationWithSaveWarning").SetActive(false); }); // set the confirmation with save false so it doesn't conflict
+                    quitButton.onClick.AddListener(() => { __instance.gameObject.FindChild("QuitConfirmation").SetActive(false); }); // set the Quit To Main Menu confirmation to false so it doesn't conflict
                 }
 
                 if (QTDConfig.SaveWarningQTD == true)

@@ -14,27 +14,9 @@ namespace CustomizedStorage
 	{
 		public static Config config;
 
-		private static string modDirectory;
-
-		public static void Plugin(string modDirectory = null)
-		{
-			Mod.modDirectory = modDirectory ?? "Subnautica_Data/Managed";
-			LoadConfig();
-
-			HarmonyInstance harmony = HarmonyInstance.Create("com.CustomizedStorage.mod");
-			harmony.PatchAll(Assembly.GetExecutingAssembly());
-
-			Logger.Log("Patched");
-		}
-
 		public static string GetModPath()
 		{
-			return Environment.CurrentDirectory + "/" + modDirectory;
-		}
-
-		public static string GetAssetPath(string filename)
-		{
-			return GetModPath() + "/Assets/" + filename;
+			return Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 		}
 
 		private static string GetConfigPath()
@@ -42,7 +24,7 @@ namespace CustomizedStorage
 			return GetModPath() + "/config.json";
 		}
 
-        private static void LoadConfig()
+        public static void LoadConfig()
         {
             string filePath = GetConfigPath();
             if (!File.Exists(filePath))

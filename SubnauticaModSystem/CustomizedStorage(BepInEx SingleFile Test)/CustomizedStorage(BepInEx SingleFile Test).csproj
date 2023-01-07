@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D61DB93E-A531-4F7C-8F22-3483B103B7D7}</ProjectGuid>
+    <ProjectGuid>{129329F7-72E5-46E2-A873-D468AA0B5A61}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>QuitToDesktop</RootNamespace>
-    <AssemblyName>QuitToDesktop</AssemblyName>
+    <RootNamespace>CustomizedStorage_BepInEx_SingleFile_Test_</RootNamespace>
+    <AssemblyName>CustomizedStorage%28BepInEx SingleFile Test%29</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -44,6 +44,9 @@
     <Reference Include="BepInEx">
       <HintPath>D:\Program Files (x86)\SteamLibrary\steamapps\common\Subnautica\BepInEx\core\BepInEx.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>D:\Program Files (x86)\SteamLibrary\steamapps\common\Subnautica\Subnautica_Data\Managed\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="SMLHelper">
       <HintPath>D:\Program Files (x86)\SteamLibrary\steamapps\common\Subnautica\BepInEx\plugins\Modding Helper\SMLHelper.dll</HintPath>
     </Reference>
@@ -64,14 +67,28 @@
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>D:\Program Files (x86)\SteamLibrary\steamapps\common\Subnautica\Subnautica_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>D:\Program Files (x86)\SteamLibrary\steamapps\common\Subnautica\Subnautica_Data\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>D:\Program Files (x86)\SteamLibrary\steamapps\common\Subnautica\Subnautica_Data\Managed\UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>D:\Program Files (x86)\SteamLibrary\steamapps\common\Subnautica\Subnautica_Data\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>D:\Program Files (x86)\SteamLibrary\steamapps\common\Subnautica\Subnautica_Data\Managed\UnityEngine.UI.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>D:\Program Files (x86)\SteamLibrary\steamapps\common\Subnautica\Subnautica_Data\Managed\UnityEngine.UIElementsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>D:\Program Files (x86)\SteamLibrary\steamapps\common\Subnautica\Subnautica_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Config.cs" />
-    <Compile Include="QuitToDesktopMod.cs" />
-    <Compile Include="QuitToDesktopPlugin.cs" />
+    <Compile Include="CSMOD.cs" />
+    <Compile Include="CSPLUGIN.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

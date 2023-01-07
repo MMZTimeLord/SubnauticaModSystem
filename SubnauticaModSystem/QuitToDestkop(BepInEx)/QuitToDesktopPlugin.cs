@@ -6,9 +6,11 @@ using SMLHelper.V2.Handlers;
 namespace QuitToDesktop
 {
     [BepInPlugin(myGUID, pluginName, versionString)]
-    public class QuitToDesktopePlugin : BaseUnityPlugin
+    public class QuitToDesktopPlugin : BaseUnityPlugin
     {
-        // Mod Information: Original Base Code by Randy Knapp with QMM
+        // Mod Information: Adds a "Quit to Desktop" button and renames the "Quit" to "Quit to Main Menu" to the in game menu.
+        // Includes Option->Mods to turn on/off the Save warning for "Quit to Desktop"
+        // Original Base Code by RandyKnapp and metious with QMM
         private const string myGUID = "com.mmztimelord.quittodesktop";
         private const string pluginName = "Quit To Desktop BepInEx Mod";
         private const string versionString = "2.0.0";
@@ -19,6 +21,7 @@ namespace QuitToDesktop
 
         private void Awake()
         {
+            // This will make sure our configuration is saved to a file for use later.
             IngameMenuHandler.RegisterOnSaveEvent(new System.Action(QuitToDesktopMod.QTDConfig.Save));
 
             // Patch in our MOD
