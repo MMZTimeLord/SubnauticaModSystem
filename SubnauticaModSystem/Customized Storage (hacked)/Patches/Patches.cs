@@ -144,34 +144,48 @@ namespace CustomizedStorage.Patches
 	{
 		private static void Postfix(uGUI_ItemsContainer __instance, int width, int height)
 		{
-			var x = __instance.rectTransform.anchoredPosition.x;
-			if (height == 9)
+			var anchor = __instance.rectTransform.anchoredPosition;
+			
+			var nameContainer = __instance.gameObject.name.Replace("(Clone)", "").ToLower();
+			if (nameContainer.Equals("torpedocontainer1"))
 			{
-				__instance.rectTransform.anchoredPosition = new Vector2(x, -39);
+				anchor = new Vector2( 284f,  138f);
 			}
-			else if (height == 10)
+			// y = 138 - (4 * 71 + 53)
+			else if (nameContainer.Equals("torpedocontainer2"))
 			{
-				__instance.rectTransform.anchoredPosition = new Vector2(x, -75);
-			}
-			else
-			{
-				__instance.rectTransform.anchoredPosition = new Vector2(x, -4);
-			}
-
-			var y = __instance.rectTransform.anchoredPosition.y;
-			var sign = Mathf.Sign(x);
-			if (width == 8)
-			{
-				__instance.rectTransform.anchoredPosition = new Vector2(sign * (284 + 8), y);
+				anchor = new Vector2(284f, -199f); 
 			}
 			else
 			{
-				__instance.rectTransform.anchoredPosition = new Vector2(sign * 284, y);
+				var x = anchor.x;
+				if (height == 9)
+				{
+					anchor = new Vector2(x, -39);
+				}
+				else if (height == 10)
+				{
+					anchor = new Vector2(x, -75);
+				}
+				else
+				{
+					anchor = new Vector2(x, -4);
+				}
 
+				var y = anchor.y;
+				var sign = Mathf.Sign(x);
+				if (width == 8)
+				{
+					anchor = new Vector2(sign * (284 + 8), y);
+				}
+				else
+				{
+					anchor = new Vector2(sign * 284, y);
+
+				}
 			}
+
+			__instance.rectTransform.anchoredPosition = anchor;
 		}
 	}
 }
- 
- 
- 
