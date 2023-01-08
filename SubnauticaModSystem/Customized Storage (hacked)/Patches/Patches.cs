@@ -96,6 +96,7 @@ namespace CustomizedStorage.Patches
 	{
 		private static bool Prefix(SeamothStorageContainer __instance)
 		{
+			// also affects seamoth torpedos
 			__instance.width = Mod.config.SeamothStorage.width;
 			__instance.height = Mod.config.SeamothStorage.height;
 			return true;
@@ -147,14 +148,14 @@ namespace CustomizedStorage.Patches
 			var anchor = __instance.rectTransform.anchoredPosition;
 			
 			var nameContainer = __instance.gameObject.name.Replace("(Clone)", "").ToLower();
-			if (nameContainer.Equals("torpedocontainer1"))
+			// torpedocontainer1, 2: large acu, seamoth torpedos, prawn torpedos 
+			// torpedocontainer3, 4: seamoth torpedos, prawn torpedos
+			if (nameContainer.Equals("torpedocontainer1") || nameContainer.Equals("torpedocontainer3"))
 			{
-				anchor = new Vector2( 284f,  138f);
+				anchor.x = 127;
 			}
-			// y = 138 - (4 * 71 + 53)
-			else if (nameContainer.Equals("torpedocontainer2"))
+			else if (nameContainer.Equals("torpedocontainer2") || nameContainer.Equals("torpedocontainer4"))
 			{
-				anchor = new Vector2(284f, -199f); 
 			}
 			else
 			{
