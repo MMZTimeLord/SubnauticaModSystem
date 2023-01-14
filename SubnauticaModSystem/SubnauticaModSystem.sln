@@ -51,6 +51,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomizedStorage(BepInEx S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomizedStorage(BepInEx)", "Customized Storage (hacked)\CustomizedStorage(BepInEx).csproj", "{B9C20D89-575A-4334-84B4-4E0885536467}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomizedStorage(BepInEx v2)", "CustomizedStorage(BepInEx)\CustomizedStorage(BepInEx v2).csproj", "{F328BBA0-4D39-4B64-82F2-22C23C701536}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Common\Common.projitems*{03b89974-4ea6-4cd4-8c9f-c039eb81de5f}*SharedItemsImports = 4
@@ -193,6 +195,12 @@ Global
 		{B9C20D89-575A-4334-84B4-4E0885536467}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9C20D89-575A-4334-84B4-4E0885536467}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9C20D89-575A-4334-84B4-4E0885536467}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F328BBA0-4D39-4B64-82F2-22C23C701536}.Debug_Autosort|Any CPU.ActiveCfg = Debug|Any CPU
+		{F328BBA0-4D39-4B64-82F2-22C23C701536}.Debug_Autosort|Any CPU.Build.0 = Debug|Any CPU
+		{F328BBA0-4D39-4B64-82F2-22C23C701536}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F328BBA0-4D39-4B64-82F2-22C23C701536}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F328BBA0-4D39-4B64-82F2-22C23C701536}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F328BBA0-4D39-4B64-82F2-22C23C701536}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

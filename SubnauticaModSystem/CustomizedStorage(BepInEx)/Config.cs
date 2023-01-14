@@ -142,7 +142,7 @@ namespace CustomizedStorage
     class Config
     {
         static ModCFG modCFG = new ModCFG();
-        public Size Inventory = new Size(6, 6);       // Default is 6 x 6
+        public Size Inventory = new Size(modCFG.Inv_WOption, modCFG.Inv_HOption);       // Default is 6 x 6
         public Size EscapePodLocker = new Size(modCFG.EPL_WOption, modCFG.EPL_HOption); // Default is 4 x 8
         public Size WaterproofLocker = new Size(modCFG.WPL_WOption, modCFG.WPL_HOption);// Default is 4 x 4
         public Size SmallLocker = new Size(modCFG.SML_WOption, modCFG.SML_HOption);     // Default is 4 x 8

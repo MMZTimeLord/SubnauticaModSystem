@@ -5,6 +5,7 @@ using SMLHelper.V2.Handlers;
 
 namespace QuitToDesktop
 {
+    [BepInDependency("com.ahk1221.smlhelper")]
     [BepInPlugin(myGUID, pluginName, versionString)]
     public class QuitToDesktopPlugin : BaseUnityPlugin
     {

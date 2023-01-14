@@ -4,6 +4,8 @@ using HarmonyLib;
 
 namespace CustomizedStorage
 {
+    [BepInDependency("sn.advancedinventory.mod", BepInDependency.DependencyFlags.SoftDependency)]
+    [BepInDependency("com.ahk1221.smlhelper")]
     [BepInPlugin(myGUID, MODNAME, VERSION)]
     public class CustomizedStorage : BaseUnityPlugin
     {
@@ -14,7 +16,7 @@ namespace CustomizedStorage
             MODNAME = "CustomizedStorage",
             AUTHOR = "RandyKnapp",
             myGUID = "com." + AUTHOR + "." + MODNAME,
-            VERSION = "1.0.6.0";
+            VERSION = "1.0.7.0";
 
         private void Awake()
         {
