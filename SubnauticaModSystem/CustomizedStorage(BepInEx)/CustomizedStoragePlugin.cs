@@ -6,6 +6,7 @@ using SMLHelper.V2.Handlers;
 
 namespace CustomizedStorage
 {
+    [BepInDependency("com.ahk1221.smlhelper")]
     [BepInPlugin(myGUID, pluginName, versionString)]
     public class CustomizedStoragePlugin : BaseUnityPlugin
     {
@@ -14,20 +15,19 @@ namespace CustomizedStorage
         // Original Base Code by Randy Knapp with QMM
         private const string myGUID = "com.mmztimelord.customizedstorage";
         private const string pluginName = "Customized Storage capacity";
-        private const string versionString = "1.0.5"; // Initial BepInEx release (May have bugs)
+        private const string versionString = "2.0.0"; // BepInEx release w/Options Menu Config Controls
 
         private static readonly Harmony harmony = new Harmony(myGUID);
 
         public static ManualLogSource logger;
 
-        private void Awake()
+        public void Awake()
         {
             // This will make sure our configuration is saved to a file for use later.
             IngameMenuHandler.RegisterOnSaveEvent(new System.Action(Mod.ModCFG.Save));
 
             // Patch in our MOD and create an entry in the Log of it loading.
             Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly(), myGUID);
-            //harmony.PatchAll();
             Logger.LogInfo($"PluginName: {pluginName}, VersionString: {versionString} is loaded.");
             logger = Logger;
         }

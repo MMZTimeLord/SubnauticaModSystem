@@ -25,7 +25,7 @@ namespace QuitToDesktop
             // This will make sure our configuration is saved to a file for use later.
             IngameMenuHandler.RegisterOnSaveEvent(new System.Action(QuitToDesktopMod.QTDConfig.Save));
 
-            // Patch in our MOD
+            // Patch in our MOD and create an entry in the Log of it loading.
             harmony.PatchAll();
             Logger.LogInfo($"PluginName: {pluginName}, VersionString: {versionString} is loaded.");
             logger = Logger;
