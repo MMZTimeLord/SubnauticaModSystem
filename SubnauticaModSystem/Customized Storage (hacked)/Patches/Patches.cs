@@ -96,6 +96,7 @@ namespace CustomizedStorage.Patches
 	{
 		private static bool Prefix(SeamothStorageContainer __instance)
 		{
+			// also affects seamoth torpedos
 			__instance.width = Mod.config.SeamothStorage.width;
 			__instance.height = Mod.config.SeamothStorage.height;
 			return true;
@@ -144,34 +145,48 @@ namespace CustomizedStorage.Patches
 	{
 		private static void Postfix(uGUI_ItemsContainer __instance, int width, int height)
 		{
-			var x = __instance.rectTransform.anchoredPosition.x;
-			if (height == 9)
+			var anchor = __instance.rectTransform.anchoredPosition;
+			
+			var nameContainer = __instance.gameObject.name.Replace("(Clone)", "").ToLower();
+			// torpedocontainer1, 2: large acu, seamoth torpedos, prawn torpedos 
+			// torpedocontainer3, 4: seamoth torpedos, prawn torpedos
+			if (nameContainer.Equals("torpedocontainer1") || nameContainer.Equals("torpedocontainer3"))
 			{
-				__instance.rectTransform.anchoredPosition = new Vector2(x, -39);
+				anchor.x = 127;
 			}
-			else if (height == 10)
+			else if (nameContainer.Equals("torpedocontainer2") || nameContainer.Equals("torpedocontainer4"))
 			{
-				__instance.rectTransform.anchoredPosition = new Vector2(x, -75);
-			}
-			else
-			{
-				__instance.rectTransform.anchoredPosition = new Vector2(x, -4);
-			}
-
-			var y = __instance.rectTransform.anchoredPosition.y;
-			var sign = Mathf.Sign(x);
-			if (width == 8)
-			{
-				__instance.rectTransform.anchoredPosition = new Vector2(sign * (284 + 8), y);
 			}
 			else
 			{
-				__instance.rectTransform.anchoredPosition = new Vector2(sign * 284, y);
+				var x = anchor.x;
+				if (height == 9)
+				{
+					anchor = new Vector2(x, -39);
+				}
+				else if (height == 10)
+				{
+					anchor = new Vector2(x, -75);
+				}
+				else
+				{
+					anchor = new Vector2(x, -4);
+				}
 
+				var y = anchor.y;
+				var sign = Mathf.Sign(x);
+				if (width == 8)
+				{
+					anchor = new Vector2(sign * (284 + 8), y);
+				}
+				else
+				{
+					anchor = new Vector2(sign * 284, y);
+
+				}
 			}
+
+			__instance.rectTransform.anchoredPosition = anchor;
 		}
 	}
 }
- 
- 
- 
